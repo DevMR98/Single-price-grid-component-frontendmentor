@@ -1,0 +1,162 @@
+:root {
+    /*colores primarios */
+    --cyan: hsl(179, 62%, 43%);
+    --brightYellow: hsl(71, 73%, 54%);
+    /*colores neutrales*/
+    --lightGray:  hsl(204, 43%, 93%);
+    --grayishBlue: hsl(218, 44%, 22%);
+    --principalFont: 'Karla', sans-serif;;
+    --white:#ffffff;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*10px = 1rem*/
+}
+
+
+
+/*Box sizing*/
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/*Globals*/
+body{
+    font-family: var(--principalFont);
+    font-size: 1.6rem;
+    background-color: var(--lightGray);
+    
+    
+}
+
+
+.contenedor{
+    width: min(90%,144rem);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*card*/
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+    padding: 3rem;
+    width: min(90%,80rem);
+    height: min(70%, 50rem);
+}
+@media(min-width:768px){
+    .card{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+
+}
+}
+
+/*card principal*/
+.card__principal{
+    background-color: var(--white);
+    padding: 2rem;
+}
+
+@media(min-width:768px){
+    .card__principal{
+    grid-column: 1/3;
+    padding: 3rem 5rem 3rem 5rem;
+    
+}
+}
+
+
+.card__principal h1{
+    color: var(--cyan);
+   
+}
+.card__principal h2{
+    color: var(--brightYellow);
+     
+}
+.card__principal p{
+    color: gray;
+}
+
+/*card suscription*/
+.card__suscription{
+    padding: 5rem;
+}
+
+.card__suscription{
+    background-color: var(--cyan);
+}
+
+.price{
+    display: flex;
+    gap: 2rem;
+}
+
+.price h3{
+    margin-bottom: 1rem;
+}
+
+.card__suscription h2{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.card__suscription h3, .card__suscription h2{
+    color: var(--white);
+}
+.card__suscription h3{
+    color: var(--lightGray);
+    font-weight: normal;
+}
+
+.card__suscription p{
+    margin-top:0 ;
+    color: var(--white);
+    
+}
+
+.card__suscription--price{
+    font-size: 5rem;
+    color: var(--white);
+}
+
+.card__suscription a{
+    text-decoration: none;
+    color: var(--white);
+    padding: 2rem;
+    background-color: var(--brightYellow);
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+/*card info*/
+.card__info{
+    background-color: hsl(179, 62%, 43%, 0.8);
+    padding: 5rem 10rem 5rem 5rem;
+    
+}
+.card__info h2{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--white);
+}
+.card__info ul{
+    list-style: none;
+    padding: 0;
+    color: var(--lightGray);
+    font-weight: normal;
+    line-height: 1.5;
+    margin-top: 3rem;
+}
